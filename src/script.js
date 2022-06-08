@@ -63,7 +63,7 @@ let ii = 0;
 
 for (let i = 0; i < count; i++) {
     for (let j = 0; j < count; j++) {
-
+        transform.position.set(i - count / 2, 0, j - count / 2);
     }
 }
 /**
