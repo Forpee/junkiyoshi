@@ -36,13 +36,14 @@ const material = new THREE.ShaderMaterial({
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
 // scene.add(mesh)
-
+let meshes = [];
 for (let i = 0; i < 10; i++) {
     for (let j = 0; j < 10; j++) {
         const mesh = new THREE.Mesh(geometry, material);
         mesh.position.x = i * 1.1 - 5;
         mesh.position.y = j * 1.1 - 5;
         scene.add(mesh);
+        meshes.push(mesh);
     }
 
 }
@@ -54,6 +55,20 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 };
+
+let t1 = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+
+t1.to(meshes, {
+    duration: 1,
+    x: 1,
+    y: 1,
+    z: 1,
+    stagger: {
+        grid: [10, 10],
+        from: 'center',
+        amount: 1.5,
+    }
+});
 
 window.addEventListener('resize', () => {
     // Update sizes
