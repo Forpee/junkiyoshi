@@ -62,7 +62,9 @@ let transform = new THREE.Object3D();
 let ii = 0;
 
 for (let i = 0; i < count; i++) {
+    for (let j = 0; j < count; j++) {
 
+    }
 }
 /**
  * Sizes
