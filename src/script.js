@@ -34,7 +34,7 @@ const material = new THREE.ShaderMaterial({
 });
 
 // Mesh
-const mesh = new THREE.Mesh(geometry, material);
+// const mesh = new THREE.Mesh(geometry, material);
 // scene.add(mesh)
 // let meshes = [];
 // for (let i = 0; i < 10; i++) {
@@ -51,6 +51,8 @@ const mesh = new THREE.Mesh(geometry, material);
 // }
 
 let count = 20;
+
+const mesh = new THREE.InstancedMesh;
 /**
  * Sizes
  */
