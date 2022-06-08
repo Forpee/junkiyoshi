@@ -52,7 +52,9 @@ const material = new THREE.ShaderMaterial({
 
 let count = 20;
 
-const mesh = new THREE.InstancedMesh;
+const mesh = new THREE.InstancedMesh(
+    new THREE.BoxBufferGeometry(1, 1, 1)
+);
 /**
  * Sizes
  */
