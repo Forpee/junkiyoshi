@@ -36,20 +36,21 @@ const material = new THREE.ShaderMaterial({
 // Mesh
 const mesh = new THREE.Mesh(geometry, material);
 // scene.add(mesh)
-let meshes = [];
-for (let i = 0; i < 10; i++) {
-    for (let j = 0; j < 10; j++) {
-        const mesh = new THREE.Mesh(geometry, material);
-        mesh.position.x = i * 1.1 - 5;
-        mesh.position.y = j * 1.1 - 5;
-        mesh.scale.set(0.1, 0.1, 0.1);
-        scene.add(mesh);
-        meshes.push(mesh.scale);
+// let meshes = [];
+// for (let i = 0; i < 10; i++) {
+//     for (let j = 0; j < 10; j++) {
+//         const mesh = new THREE.Mesh(geometry, material);
+//         mesh.position.x = i * 1.1 - 5;
+//         mesh.position.y = j * 1.1 - 5;
+//         mesh.scale.set(0.1, 0.1, 0.1);
+//         scene.add(mesh);
+//         meshes.push(mesh.scale);
 
-    }
+//     }
 
-}
+// }
 
+let count = 20;
 /**
  * Sizes
  */
