@@ -60,6 +60,10 @@ const mesh = new THREE.InstancedMesh(
 
 let transform = new THREE.Object3D();
 let ii = 0;
+
+for (let i = 0; i < count; i++) {
+
+}
 /**
  * Sizes
  */
