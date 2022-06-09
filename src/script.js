@@ -57,7 +57,7 @@ const mesh = new THREE.InstancedMesh(
     material,
     count ** 2
 );
-
+// 
 let transform = new THREE.Object3D();
 let ii = 0;
 
