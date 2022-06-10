@@ -66,7 +66,7 @@ void main()
     
     float border=max(borderx,bordery);
     
-    vec3 finalColor=mix(hsl2rgb(vDepth,.5,.5),vec3(1.,1.,1.),border);
+    vec3 finalColor=mix(hsl2rgb(vDepth,vDepth,vDepth),vec3(1.,1.,1.),border);
     
     gl_FragColor=vec4(finalColor,1.);
 }

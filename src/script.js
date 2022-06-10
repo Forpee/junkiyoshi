@@ -50,7 +50,7 @@ const material = new THREE.ShaderMaterial({
 
 // }
 
-let count = 20;
+let count = 2 * 20;
 
 const mesh = new THREE.InstancedMesh(
     geometry,
@@ -86,6 +86,7 @@ for (let i = 0; i < count; i++) {
 
 geometry.setAttribute('random', new THREE.InstancedBufferAttribute(random, 1));
 geometry.setAttribute('depth', new THREE.InstancedBufferAttribute(depth, 1));
+geometry.setAttribute('pos', new THREE.InstancedBufferAttribute(pos, 3));
 scene.add(mesh);
 scene.rotation.y = (53 * Math.PI / 180);
 /**
@@ -132,7 +133,7 @@ window.addEventListener('resize', () => {
 
 // Base camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100);
-camera.position.set(0, -10, 20);
+camera.position.set(0, 40, 20);
 scene.add(camera);
 
 // Controls
