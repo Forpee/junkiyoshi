@@ -1,5 +1,7 @@
 varying vec2 vUv;
 attribute float random;
+attribute float depth;
+varying float vDepth;
 
 void main()
 {
