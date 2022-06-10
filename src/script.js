@@ -74,6 +74,8 @@ for (let i = 0; i < count; i++) {
         }
     }
 }
+
+geometry.setAttribute('random', new THREE.InstancedBufferAttribute(random, 1));
 scene.add(mesh);
 scene.rotation.y = (53 * Math.PI / 180);
 /**
