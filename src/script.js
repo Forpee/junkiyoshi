@@ -70,6 +70,7 @@ for (let i = 0; i < count; i++) {
             transform.position.set(i - count / 2, j - count / 2, k - count / 2);
             transform.updateMatrix();
             random[ii] = Math.random();
+            depth[ii] = j / count;
             mesh.setMatrixAt(ii++, transform.matrix);
 
         }
