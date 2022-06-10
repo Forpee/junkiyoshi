@@ -72,6 +72,7 @@ for (let i = 0; i < count; i++) {
     }
 }
 scene.add(mesh);
+scene.rotation.y = (53 * Math.PI / 180);
 /**
  * Sizes
  */
