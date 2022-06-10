@@ -55,7 +55,7 @@ let count = 20;
 const mesh = new THREE.InstancedMesh(
     new THREE.BoxBufferGeometry(1, 1, 1),
     material,
-    count ** 2
+    count ** 3
 );
 // 
 let transform = new THREE.Object3D();
@@ -63,9 +63,12 @@ let ii = 0;
 
 for (let i = 0; i < count; i++) {
     for (let j = 0; j < count; j++) {
-        transform.position.set(i - count / 2, 0, j - count / 2);
-        transform.updateMatrix();
-        mesh.setMatrixAt(ii++, transform.matrix);
+        for (let k = 0; k < count; k++) {
+            transform.position.set(i - count / 2, j - count / 2, k - count / 2);
+            transform.updateMatrix();
+            mesh.setMatrixAt(ii++, transform.matrix);
+
+        }
     }
 }
 scene.add(mesh);
