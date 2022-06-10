@@ -76,17 +76,17 @@ const sizes = {
 
 let t1 = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
 
-t1.to(meshes, {
-    duration: 1,
-    x: 1,
-    y: 1,
-    z: 1,
-    stagger: {
-        grid: [10, 10],
-        from: 'center',
-        amount: 1.5,
-    }
-});
+// t1.to(meshes, {
+//     duration: 1,
+//     x: 1,
+//     y: 1,
+//     z: 1,
+//     stagger: {
+//         grid: [10, 10],
+//         from: 'center',
+//         amount: 1.5,
+//     }
+// });
 
 window.addEventListener('resize', () => {
     // Update sizes
