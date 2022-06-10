@@ -1,6 +1,7 @@
 uniform float uTime;
 
 varying vec2 vUv;
+varying float vDepth;
 
 float hue2rgb(float f1,float f2,float hue){
     if(hue<0.)
@@ -65,7 +66,7 @@ void main()
     
     float border=max(borderx,bordery);
     
-    vec3 finalColor=mix(vec3(.354,.332,.975),vec3(1.,1.,1.),border);
+    vec3 finalColor=mix(hsl2rgb(vDepth,.5,.5),vec3(1.,1.,1.),border);
     
     gl_FragColor=vec4(finalColor,1.);
 }
