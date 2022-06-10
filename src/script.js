@@ -60,9 +60,11 @@ const mesh = new THREE.InstancedMesh(
 
 let random = new Float32Array(count ** 3);
 let depth = new Float32Array(count ** 3);
+let pos = new Float32Array(3 * count ** 3);
 // 
 let transform = new THREE.Object3D();
 let ii = 0;
+let jj = 0;
 
 for (let i = 0; i < count; i++) {
     for (let j = 0; j < count; j++) {
@@ -71,6 +73,11 @@ for (let i = 0; i < count; i++) {
             transform.updateMatrix();
             random[ii] = Math.random();
             depth[ii] = j / count;
+
+            pos[jj] = i / count; jj++;
+            pos[jj] = j / count; jj++;
+            pos[jj] = k / count; jj++;
+
             mesh.setMatrixAt(ii++, transform.matrix);
 
         }
