@@ -57,6 +57,8 @@ const mesh = new THREE.InstancedMesh(
     material,
     count ** 3
 );
+
+let random = new Float32Array(count ** 3);
 // 
 let transform = new THREE.Object3D();
 let ii = 0;
@@ -66,6 +68,7 @@ for (let i = 0; i < count; i++) {
         for (let k = 0; k < count; k++) {
             transform.position.set(i - count / 2, j - count / 2, k - count / 2);
             transform.updateMatrix();
+            random[ii] = Math.random();
             mesh.setMatrixAt(ii++, transform.matrix);
 
         }
