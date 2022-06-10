@@ -59,6 +59,7 @@ const mesh = new THREE.InstancedMesh(
 );
 
 let random = new Float32Array(count ** 3);
+let depth = new Float32Array(count ** 3);
 // 
 let transform = new THREE.Object3D();
 let ii = 0;
